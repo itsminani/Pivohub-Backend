@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pivohubnew-dev-125348-authRole",
+      "UnauthRoleArn": "arn:aws:iam::004720906935:role/amplify-pivohubnew-dev-125348-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::004720906935:role/amplify-pivohubnew-dev-125348-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-pivohubnew-dev-125348-deployment",
+      "UnauthRoleName": "amplify-pivohubnew-dev-125348-unauthRole",
+      "StackName": "amplify-pivohubnew-dev-125348",
+      "StackId": "arn:aws:cloudformation:us-east-2:004720906935:stack/amplify-pivohubnew-dev-125348/1ee3b440-3f22-11ec-90b1-024ac64d296c",
+      "AmplifyAppId": "d1q12j3curim9i"
+    },
+    "categories": {
+      "auth": {
+        "pivohubnewca9ecc0b": {}
+      }
+    }
+  }
+}
