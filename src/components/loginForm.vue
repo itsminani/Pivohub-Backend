@@ -32,7 +32,7 @@
               </div>
               <div class="field">
                 <label class="checkbox">
-                  <input type="checkbox" v-model="checkBox"/>
+                  <input type="checkbox" v-model="checkBox" />
                   Remember me
                 </label>
               </div>
@@ -62,16 +62,16 @@ export default {
     return {
       email: "",
       password: "",
-      checkBox: true
+      checkBox: true,
     };
   },
   methods: {
     async signIn() {
-      let username = this.email
-      let password = this.password
+      let username = this.email;
+      let password = this.password;
       try {
         const user = await Auth.signIn(username, password);
-        console.log(user)
+        console.log(user);
         window.location.reload();
       } catch (error) {
         console.log("error signing in", error);

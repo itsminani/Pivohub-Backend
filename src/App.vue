@@ -25,23 +25,26 @@
         <template #end>
           <b-navbar-item tag="div">
             <div v-if="products">
-            <a
-              class="button is-primary"
-              style="margin-right: 10px"
-              v-if="products[0]"
-              @click="navigate()"
-            >
-              <strong>Cart({{ products.length }})</strong>
-            </a>
+              <a
+                class="button is-primary"
+                style="margin-right: 10px"
+                v-if="products[0]"
+                @click="navigate()"
+              >
+                <strong>Cart({{ products.length }})</strong>
+              </a>
             </div>
             <div class="buttons">
               <div>
                 <div v-if="user">
-                  <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 30px">
+                  <div
+                    class="navbar-item has-dropdown is-hoverable"
+                    style="margin-right: 30px"
+                  >
                     <a class="navbar-link">
                       <b-icon icon="account" style="margin-right: 10px">
                       </b-icon>
-                      {{user.attributes.name}}
+                      {{ user.attributes.name }}
                     </a>
                     <div class="navbar-dropdown">
                       <a
@@ -199,7 +202,7 @@ AOS.init({
   duration: 600,
 });
 document.title = "PivoHub";
-import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 import { mapGetters } from "vuex";
 import registerForm from "./components/registerForm.vue";
 import loginForm from "./components/loginForm.vue";
@@ -221,8 +224,8 @@ export default {
     async signOut() {
       try {
         await Auth.signOut();
-        console.log("Sign Out Complete")
-        window.location.reload()
+        console.log("Sign Out Complete");
+        window.location.reload();
       } catch (error) {
         console.log("error signing out: ", error);
       }

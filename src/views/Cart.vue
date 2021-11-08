@@ -50,7 +50,8 @@ export default {
   },
   mounted: function () {
     const script = document.createElement("script");
-    script.src = "https://www.paypal.com/sdk/js?client-id=ARyPq7hRBbZl6fPlYayb5Pkcmd1SF26lbggn-DOomnTdwjzIHDscsPUP9L_OmHD_JKlOJPxM6TyZv5T_&currency=CAD";
+    script.src =
+      "https://www.paypal.com/sdk/js?client-id=ARyPq7hRBbZl6fPlYayb5Pkcmd1SF26lbggn-DOomnTdwjzIHDscsPUP9L_OmHD_JKlOJPxM6TyZv5T_&currency=CAD";
     script.addEventListener("load", this.setLoaded);
     document.body.appendChild(script);
   },

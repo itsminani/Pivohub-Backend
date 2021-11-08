@@ -2,9 +2,7 @@
   <div class="" style="cursor: hand">
     <nav class="navbar is-white" fixed-top>
       <div class="navbar-brand" style="margin-top: 0px">
-        <a class="navbar-item brand-text" href="/">
-          PivoHub Admin
-        </a>
+        <a class="navbar-item brand-text" href="/"> PivoHub Admin </a>
         <div class="navbar-burger burger" data-target="navMenu">
           <span></span>
           <span></span>

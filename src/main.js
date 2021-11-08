@@ -7,8 +7,8 @@ import "buefy/dist/buefy.css";
 import "@/assets/variable.sass";
 import store from "./store";
 import "animate.css";
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 
 Vue.config.productionTip = false;

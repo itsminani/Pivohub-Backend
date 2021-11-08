@@ -37,7 +37,11 @@
           "
           >REMOVE FROM CART</b-button
         >
-        <b-field v-if="product.isInCart" label="Quantity" label-position="on-border">
+        <b-field
+          v-if="product.isInCart"
+          label="Quantity"
+          label-position="on-border"
+        >
           <b-numberinput v-model="product.quantity"></b-numberinput>
         </b-field>
       </div>

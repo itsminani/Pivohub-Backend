@@ -5,10 +5,10 @@ export const initialize = async ({ commit }) => {
   try {
     let user = await Auth.currentAuthenticatedUser();
     const { attributes } = await Auth.currentAuthenticatedUser();
-    console.log(user)
-    console.log(attributes)
+    console.log(user);
+    console.log(attributes);
     commit("SET_USER_SELF", user);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 };

@@ -77,7 +77,10 @@
                   Submit
                 </button>
                 <p>
-                  Not receiving code? <a style="color: blue" @click="resendConfirmationCode()">Click Here</a>
+                  Not receiving code?
+                  <a style="color: blue" @click="resendConfirmationCode()"
+                    >Click Here</a
+                  >
                 </p>
               </div>
               <br />
@@ -139,14 +142,14 @@ export default {
   methods: {
     async signUp() {
       this.showCodeVerify = true;
-      let newUser = {attributes: {}};
+      let newUser = { attributes: {} };
       newUser.username = this.email;
       newUser.attributes.name = this.name;
       newUser.password = this.password;
       try {
         const { user } = await Auth.signUp(newUser);
         console.log(user);
-        window.location.reload()
+        window.location.reload();
       } catch (error) {
         console.log("error signing up:", error);
       }
