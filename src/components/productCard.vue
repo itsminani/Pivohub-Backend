@@ -49,7 +49,11 @@
           label="Quantity"
           label-position="on-border"
         >
-          <b-numberinput v-model="product.quantity" :min="1" :max="product.product_quantity"></b-numberinput>
+          <b-numberinput
+            v-model="product.quantity"
+            :min="1"
+            :max="product.product_quantity"
+          ></b-numberinput>
         </b-field>
       </div>
     </div>
@@ -73,7 +77,7 @@ export default {
   overflow: hidden;
   background: ghostwhite;
   color: var(--bg);
-max-width: 300px;
+  max-width: 300px;
 }
 
 .card.large {
