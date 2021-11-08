@@ -19,3 +19,5 @@ npm run test:unit
 ```
 npm run lint
 ```
+
+I was not able to add all the features that I wanted to add but I have been able to add Auth, A product Database and some other functionalities.
