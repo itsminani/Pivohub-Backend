@@ -147,7 +147,7 @@
           class="animate"
           href="https://github.com/itsminani/Pivohub-Backend"
         >
-          This was made using 
+          This was made using
           <b-tag type="is-success" class="ml-2">
             <span class="icon">
               <i class="fab fa-vuejs"></i>
@@ -155,7 +155,7 @@
             Vue Js</b-tag
           >
           <b-tag type="is-warning" class="ml-2">
-            <span class="icon" >
+            <span class="icon">
               <i class="fab fa-aws"></i>
             </span>
             AWS</b-tag

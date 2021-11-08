@@ -61,13 +61,15 @@ export default {
     filteredProducts: function () {
       return this.products.filter(
         (prod) =>
-          prod.product_name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-          prod.product_description.toLowerCase().includes(this.searchTerm.toLowerCase())
+          prod.product_name
+            .toLowerCase()
+            .includes(this.searchTerm.toLowerCase()) ||
+          prod.product_description
+            .toLowerCase()
+            .includes(this.searchTerm.toLowerCase())
       );
-
     },
   },
-  methods: {
-  },
+  methods: {},
 };
 </script>
