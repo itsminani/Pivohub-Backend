@@ -8,4 +8,4 @@ type Product @model @auth(rules: [{allow: public, operations: [read]}]) {
   product_tags: AWSJSON
   product_quantity: String
   product_volume: String
-} 
+}
