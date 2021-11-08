@@ -27,8 +27,6 @@
 </template>
 
 <script>
-// import { API } from "aws-amplify";
-// import { listProducts } from "@/graphql/queries.js";
 import productCard from "@/components/productCard.vue";
 import { mapGetters } from "vuex";
 export default {
@@ -36,9 +34,6 @@ export default {
     loaded: false,
     paidFor: false,
   }),
-  created() {
-    // this.fetchProducts();
-  },
   components: {
     productCard,
   },
@@ -56,18 +51,6 @@ export default {
     document.body.appendChild(script);
   },
   methods: {
-    // async fetchProducts() {
-    //   try {
-    //     const products = await API.graphql({
-    //       query: listProducts,
-    //     });
-    //     console.log(products);
-    //     console.log(products.data.listProducts.items);
-    //     this.products = products.data.listProducts.items;
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // },
     setLoaded: function () {
       this.loaded = true;
       window.paypal
