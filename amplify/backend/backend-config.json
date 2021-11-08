@@ -27,7 +27,7 @@
     }
   },
   "api": {
-    "pivohubnew": {
+    "PivohubNew": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -35,19 +35,23 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 300,
-              "description": "PivoHubAPIAUTH"
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authpivohubnewca9ecc0b"
+              }
+            }
+          ]
         }
       }
-    }
-  },
-  "storage": {
-    "PivohubS3Bucket": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation"
     }
   }
 }

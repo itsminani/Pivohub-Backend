@@ -1,9 +1,16 @@
 <template>
-  <div class="card large">
-    <div class="card-image">
-      <figure class="image is-16by9">
-        <img :src="product.product_image" alt="Image" />
-      </figure>
+  <div class="main card large">
+    <div class="is-flat">
+      <div class="card-image">
+        <figure class="image is-3by4">
+          <img
+            :src="product.product_image"
+            alt="Placeholder Drinks"
+            class="modal-button"
+            data-target="modal-image2"
+          />
+        </figure>
+      </div>
     </div>
     <div class="card-content">
       <div class="media">
@@ -42,7 +49,7 @@
           label="Quantity"
           label-position="on-border"
         >
-          <b-numberinput v-model="product.quantity"></b-numberinput>
+          <b-numberinput v-model="product.quantity" :min="1" :max="product.product_quantity"></b-numberinput>
         </b-field>
       </div>
     </div>
@@ -66,8 +73,7 @@ export default {
   overflow: hidden;
   background: ghostwhite;
   color: var(--bg);
-  min-height: 100px;
-  max-width: 300px;
+max-width: 300px;
 }
 
 .card.large {

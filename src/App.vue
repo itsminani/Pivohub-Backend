@@ -31,7 +31,7 @@
                 v-if="products[0]"
                 @click="navigate()"
               >
-                <strong>Cart({{ products.length }})</strong>
+                <strong><b-icon icon="cart" class="cart" style="margin-right: 3px"></b-icon> Cart({{ products.length }})</strong>
               </a>
             </div>
             <div class="buttons">
@@ -294,5 +294,8 @@ export default {
 .animate:hover {
   transform: scale(1.02);
   transition: 0.3s;
+}
+.cart{
+  margin-right: 10px;
 }
 </style>
