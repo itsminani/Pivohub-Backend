@@ -2,14 +2,14 @@
   <div class="shop">
     <div class="container">
       <div class="columns">
-        <div class="column is-one-fifth" align="left">
-          <p>Search Products</p>
+        <div class="column" align="left">
           <b-field>
             <b-input
               placeholder="Search..."
               v-model="searchTerm"
               type="search"
               icon="magnify"
+              hint="Doesn't work yet😥"
             >
             </b-input>
           </b-field>
@@ -20,7 +20,7 @@
           <div
             v-for="product in products"
             v-bind:key="product.id"
-            class="column is-4"
+            class="column is-3"
           >
             <productCard :product="product" />
           </div>
@@ -40,8 +40,6 @@
 </template>
 
 <script>
-// import { API } from "aws-amplify";
-// import { listProducts } from "@/graphql/queries.js";
 import productCard from "@/components/productCard.vue";
 import { mapGetters } from "vuex";
 export default {
@@ -63,24 +61,13 @@ export default {
     filteredProducts: function () {
       return this.products.filter(
         (prod) =>
-          prod.product_name.includes(this.searchTerm) ||
-          prod.product_description.includes(this.searchTerm)
+          prod.product_name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          prod.product_description.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
+
     },
   },
   methods: {
-    // async fetchProducts() {
-    //   try {
-    //     const products = await API.graphql({
-    //       query: listProducts,
-    //     });
-    //     console.log(products);
-    //     console.log(products.data.listProducts.items);
-    //     this.products = products.data.listProducts.items;
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // },
   },
 };
 </script>

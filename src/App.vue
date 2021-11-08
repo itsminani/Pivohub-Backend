@@ -136,7 +136,7 @@
         </transition>
       </div>
     </div>
-    <b-navbar>
+    <b-navbar fixed-bottom>
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <img class="image" alt="logo" src="./assets/logo.png" />
@@ -147,29 +147,26 @@
           class="animate"
           href="https://github.com/itsminani/Pivohub-Backend"
         >
-          This was made using &nbsp
-          <b-tag type="is-success">
+          This was made using 
+          <b-tag type="is-success" class="ml-2">
             <span class="icon">
               <i class="fab fa-vuejs"></i>
             </span>
             Vue Js</b-tag
           >
-          &nbsp
-          <b-tag type="is-warning">
-            <span class="icon">
+          <b-tag type="is-warning" class="ml-2">
+            <span class="icon" >
               <i class="fab fa-aws"></i>
             </span>
             AWS</b-tag
           >
-          &nbsp
-          <b-tag type="is-link">
+          <b-tag type="is-link" class="ml-2">
             <span class="icon">
               <i class="fab fa-js-square"></i>
             </span>
             JS & TS</b-tag
           >
-          &nbsp
-          <b-tag type="is-dark">
+          <b-tag type="is-dark" class="ml-2">
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
@@ -240,8 +237,8 @@ export default {
     pause() {
       this.$buefy.toast.open({
         duration: 5000,
-        message: `This is still <b>in development</b>, The text is <br/> just placeholder text that I found on your website.
-        <br/> The functionality doesn't work. I am Currently working on adding an <b>AWS Backend</b>`,
+        message: `Disclaimer :This is still <b>in development</b>, This site is not Responsive please view it on a PC😥.<br> The total development time for this was less than 24 hours... It really lacks a lot
+        <br/>But Hey,..... I was able to add some backend functionalities such as Auth, full Shop and payment System using paypal.😁`,
         type: "is-success",
         position: "is-bottom",
         pauseOnHover: true,
