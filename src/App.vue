@@ -237,7 +237,7 @@ export default {
     pause() {
       this.$buefy.toast.open({
         duration: 5000,
-        message: `Disclaimer :This is still <b>in development</b>, This site is not Responsive please view it on a PC😥.<br> This was developed in a very short time ... It really lacks a lot
+        message: `Disclaimer :This is still <b>in development </b>,This site is not Responsive please view it on a PC😥.<br> This was developed in a very short time ... It really lacks a lot
         <br/>But Hey,..... I was able to add some backend functionalities such as Auth, full Shop and payment System using paypal.😁`,
         type: "is-success",
         position: "is-bottom",
