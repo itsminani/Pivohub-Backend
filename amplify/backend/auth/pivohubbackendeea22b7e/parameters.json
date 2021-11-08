@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "pivohubnewca9ecc0b_identitypool_ca9ecc0b",
+    "identityPoolName": "pivohubbackendeea22b7e_identitypool_eea22b7e",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "pivohuca9ecc0b",
-    "userPoolName": "pivohubnewca9ecc0b_userpool_ca9ecc0b",
+    "resourceNameTruncated": "pivohueea22b7e",
+    "userPoolName": "pivohubbackendeea22b7e_userpool_eea22b7e",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -18,7 +18,8 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-        "email"
+        "email",
+        "name"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
@@ -29,10 +30,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "pivohuca9ecc0b_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "pivohueea22b7e_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "ca9ecc0b",
-    "resourceName": "pivohubnewca9ecc0b",
+    "sharedId": "eea22b7e",
+    "resourceName": "pivohubbackendeea22b7e",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -50,8 +51,14 @@
     "usernameAttributes": [
         "email"
     ],
+    "triggers": "{}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "breakCircularDependency": true,
+    "permissions": [],
     "dependsOn": []
 }

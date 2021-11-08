@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-pivohubnew-dev-125348-authRole",
-      "UnauthRoleArn": "arn:aws:iam::004720906935:role/amplify-pivohubnew-dev-125348-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::004720906935:role/amplify-pivohubnew-dev-125348-authRole",
+      "AuthRoleName": "amplify-pivohubbackend-dev-00539-authRole",
+      "UnauthRoleArn": "arn:aws:iam::004720906935:role/amplify-pivohubbackend-dev-00539-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::004720906935:role/amplify-pivohubbackend-dev-00539-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-pivohubnew-dev-125348-deployment",
-      "UnauthRoleName": "amplify-pivohubnew-dev-125348-unauthRole",
-      "StackName": "amplify-pivohubnew-dev-125348",
-      "StackId": "arn:aws:cloudformation:us-east-2:004720906935:stack/amplify-pivohubnew-dev-125348/1ee3b440-3f22-11ec-90b1-024ac64d296c",
-      "AmplifyAppId": "d1q12j3curim9i"
+      "DeploymentBucketName": "amplify-pivohubbackend-dev-00539-deployment",
+      "UnauthRoleName": "amplify-pivohubbackend-dev-00539-unauthRole",
+      "StackName": "amplify-pivohubbackend-dev-00539",
+      "StackId": "arn:aws:cloudformation:us-east-2:004720906935:stack/amplify-pivohubbackend-dev-00539/85c4f950-4051-11ec-8ed6-025ce0ab7462",
+      "AmplifyAppId": "d13ebx597u1s5f"
     },
     "categories": {
       "auth": {
-        "pivohubnewca9ecc0b": {}
+        "pivohubbackendeea22b7e": {}
       }
     }
   }
