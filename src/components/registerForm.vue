@@ -149,7 +149,6 @@ export default {
       try {
         const { user } = await Auth.signUp(newUser);
         console.log(user);
-        window.location.reload();
       } catch (error) {
         console.log("error signing up:", error);
       }

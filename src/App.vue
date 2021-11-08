@@ -136,7 +136,7 @@
         </transition>
       </div>
     </div>
-    <b-navbar fixed-bottom>
+    <b-navbar>
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <img class="image" alt="logo" src="./assets/logo.png" />
