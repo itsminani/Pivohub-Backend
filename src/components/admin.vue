@@ -1,53 +1,38 @@
 <template>
-  <div class="" style="cursor:hand;">
+  <div class="" style="cursor: hand">
     <nav class="navbar is-white" fixed-top>
-        <div class="navbar-brand" style="margin-top:0px">
-          <a class="navbar-item brand-text" href="../index.html">
-            PivoHub Admin
-          </a>
-          <div class="navbar-burger burger" data-target="navMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+      <div class="navbar-brand" style="margin-top: 0px">
+        <a class="navbar-item brand-text" href="/">
+          PivoHub Admin
+        </a>
+        <div class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/">
-              Home
-            </a>
-            <a class="navbar-item" href="/">
-              Orders
-            </a>
-            <a class="navbar-item" href="/">
-              Payments
-            </a>
-            <a class="navbar-item" href="/">
-              Exceptions
-            </a>
-            <a class="navbar-item" href="/">
-              Reports
-            </a>
-          </div>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/"> Home </a>
+          <a class="navbar-item" href="/"> Orders </a>
+          <a class="navbar-item" href="/"> Payments </a>
+          <a class="navbar-item" href="/"> Exceptions </a>
+          <a class="navbar-item" href="/"> Reports </a>
         </div>
-      
+      </div>
     </nav>
     <!-- END NAV -->
     <div class="container">
       <div class="columns">
-        <div class="column is-3 ">
+        <div class="column is-3">
           <aside class="menu is-hidden-mobile">
-            <p class="menu-label">
-              General
-            </p>
+            <p class="menu-label">General</p>
             <ul class="menu-list">
               <li><a class="is-active">Dashboard</a></li>
               <li><a>Customers</a></li>
               <li><a>Other</a></li>
             </ul>
-            <p class="menu-label">
-              Administration
-            </p>
+            <p class="menu-label">Administration</p>
             <ul class="menu-list">
               <li><a>Team Settings</a></li>
               <li>
@@ -64,9 +49,7 @@
               <li><a>Authentication</a></li>
               <li><a>Payments</a></li>
             </ul>
-            <p class="menu-label">
-              Transactions
-            </p>
+            <p class="menu-label">Transactions</p>
             <ul class="menu-list">
               <li><a>Payments</a></li>
               <li><a>Transfers</a></li>
@@ -88,12 +71,11 @@
           </nav>
           <section class="hero is-info welcome is-small">
             <div class="hero-body">
-              <div class="container" style="text-align: left;">
-                <h1 class="title">
-                  Hello, Admin.
-                </h1>
+              <div class="container" style="text-align: left">
+                <h1 class="title">Hello, Admin.</h1>
                 <h2 class="subtitle">
-                  I hope you are having a great day! This is just a design there is no functionality <b>Yet</b>.
+                  I hope you are having a great day! This is just a design there
+                  is no functionality <b>Yet</b>.
                 </h2>
               </div>
             </div>
@@ -130,9 +112,7 @@
             <div class="column is-6">
               <div class="card events-card">
                 <header class="card-header">
-                  <p class="card-header-title">
-                    Events
-                  </p>
+                  <p class="card-header-title">Events</p>
                   <a
                     href="#"
                     class="card-header-icon"
@@ -149,7 +129,9 @@
                       <tbody>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -158,7 +140,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -167,7 +151,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -176,7 +162,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -185,7 +173,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -194,7 +184,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -203,7 +195,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -212,7 +206,9 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
@@ -221,14 +217,15 @@
                         </tr>
                         <tr>
                           <td width="5%"><i class="far fa-bell"></i></td>
-                          <td  style="text-align: left">Lorum ipsum dolem aire</td>
+                          <td style="text-align: left">
+                            Lorum ipsum dolem aire
+                          </td>
                           <td class="level-right">
                             <a class="button is-small is-primary" href="#"
                               >Action</a
                             >
                           </td>
                         </tr>
-                        
                       </tbody>
                     </table>
                   </div>
@@ -241,9 +238,7 @@
             <div class="column is-6">
               <div class="card">
                 <header class="card-header">
-                  <p class="card-header-title">
-                    Inventory Search
-                  </p>
+                  <p class="card-header-title">Inventory Search</p>
                   <a
                     href="#"
                     class="card-header-icon"
@@ -274,9 +269,7 @@
               </div>
               <div class="card">
                 <header class="card-header">
-                  <p class="card-header-title">
-                    User Search
-                  </p>
+                  <p class="card-header-title">User Search</p>
                   <a
                     href="#"
                     class="card-header-icon"
@@ -332,7 +325,8 @@ export default {
 <style>
 html,
 .box {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   height: 100%;

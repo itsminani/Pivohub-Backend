@@ -1,5 +1,5 @@
 <template>
-  <div class="box is-grey" >
+  <div class="box is-grey">
     <section>
       <b-field horizontal label="Subject" message="Please enter a subject">
         <b-input name="subject" v-model="subject" expanded></b-input>
@@ -16,7 +16,7 @@
           name="email"
           type="email"
           v-model="email"
-          placeholder="nobody@nowhere.com"
+          placeholder="thisperson@pivohub.com"
           expanded
         ></b-input>
       </b-field>

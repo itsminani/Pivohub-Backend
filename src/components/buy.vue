@@ -1,57 +1,28 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h1 class="title titled is-1 mb-6">
-      E-MarketPlace
-    </h1>
+    <h1 class="title titled is-1 mb-6">E-MarketPlace</h1>
     <p>
       This was made using Vue JS<br />
       check out the
-      <a href="" target="_blank" rel="noopener"
-        >Vue</a
-      >.
+      <a href="" target="_blank" rel="noopener">Vue</a>.
     </p>
     <h3>Technologies used</h3>
     <ul>
       <li>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
+        <a href="" target="_blank" rel="noopener">babel</a>
       </li>
       <li>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener"
-          >pwa</a
-        >
+        <a href="" target="_blank" rel="noopener">pwa</a>
       </li>
       <li>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
+        <a href="" target="_blank" rel="noopener">router</a>
       </li>
       <li>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener"
-          >vuex</a
-        >
+        <a href="" target="_blank" rel="noopener">vuex</a>
       </li>
       <li>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
+        <a href="" target="_blank" rel="noopener">eslint</a>
       </li>
     </ul>
   </div>

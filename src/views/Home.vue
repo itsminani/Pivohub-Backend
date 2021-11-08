@@ -20,9 +20,7 @@
               "
               data-aos="fade-down"
             >
-              <h4 class="title titled is-1 mb-6">
-                PivoHub
-              </h4>
+              <h4 class="title titled is-1 mb-6">PivoHub</h4>
               <h2
                 class="
                   subtitled
@@ -123,9 +121,7 @@
                 is-offset-1-fullhd
               "
             >
-              <h1 class="title titled is-1 mb-6">
-                Order management
-              </h1>
+              <h1 class="title titled is-1 mb-6">Order management</h1>
               <h2
                 class="
                   subtitled
@@ -169,9 +165,7 @@
                 is-offset-1-fullhd
               "
             >
-              <h1 class="title titled is-1 mb-6">
-                Keep everything in sync
-              </h1>
+              <h1 class="title titled is-1 mb-6">Keep everything in sync</h1>
               <h2
                 class="
                   subtitled
@@ -468,8 +462,8 @@ export default {
   data() {
     return {
       showLogin: false,
-      showRegister: false
-    }
+      showRegister: false,
+    };
   },
   components: {
     contactForm,

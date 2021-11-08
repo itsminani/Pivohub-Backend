@@ -1,44 +1,72 @@
 <template>
   <div id="app">
     <div id="nav" v-if="$route.name != 'Admin'">
-      <b-navbar spaced>
+      <b-navbar fixed-top>
         <template #brand>
           <b-navbar-item tag="router-link" :to="{ path: '/' }">
-            <img class="image" alt="logo" src="./assets/logo.png" />
+            <img class="imageLogo" alt="logo" src="./assets/logo.png" />
           </b-navbar-item>
         </template>
         <template #start>
-          <router-link to="/">
-            <b-navbar-item to="/home">
-              Home
-            </b-navbar-item>
-          </router-link>
-          <router-link to="/about">
-            <b-navbar-item to="/about">
-              About
-            </b-navbar-item>
-          </router-link>
-          <b-navbar-dropdown label="User">
-            <b-navbar-item @click="showRegister = true" href="#">
-              Account
-            </b-navbar-item>
-            <router-link to="/admin">
-              <b-navbar-item>
-                Admin Demo
-              </b-navbar-item>
-            </router-link>
-          </b-navbar-dropdown>
-        </template> 
+          <b-navbar-item tag="router-link" :to="{ path: '/' }">
+            Home
+          </b-navbar-item>
+          <b-navbar-item tag="router-link" :to="{ path: '/about' }">
+            About
+          </b-navbar-item>
+          <b-navbar-item tag="router-link" :to="{ path: '/admin' }">
+            Admin
+          </b-navbar-item>
+          <b-navbar-item tag="router-link" :to="{ path: '/shop' }">
+            Shop
+          </b-navbar-item>
+        </template>
 
         <template #end>
           <b-navbar-item tag="div">
+            <div v-if="products">
+            <a
+              class="button is-primary"
+              style="margin-right: 10px"
+              v-if="products[0]"
+              @click="navigate()"
+            >
+              <strong>Cart({{ products.length }})</strong>
+            </a>
+            </div>
             <div class="buttons">
-              <a @click="showRegister = true" class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a @click="showLogin = true" class="button is-light">
-                Log in
-              </a>
+              <div>
+                <div v-if="user">
+                  <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 30px">
+                    <a class="navbar-link">
+                      <b-icon icon="account" style="margin-right: 10px">
+                      </b-icon>
+                      {{user.attributes.name}}
+                    </a>
+                    <div class="navbar-dropdown">
+                      <a
+                        class="navbar-item"
+                        tag="router-link"
+                        :to="{ path: '/admin' }"
+                      >
+                        Admin Dashboard
+                      </a>
+                      <a class="navbar-item"> Profile </a>
+                      <a class="navbar-item"> Settings </a>
+                      <hr class="navbar-divider" />
+                      <a class="navbar-item" @click="signOut()"> Logout </a>
+                    </div>
+                  </div>
+                </div>
+                <div v-if="!user">
+                  <a @click="showRegister = true" class="button is-primary">
+                    <strong>Sign up</strong>
+                  </a>
+                  <a @click="showLogin = true" class="button is-light">
+                    Log in
+                  </a>
+                </div>
+              </div>
               <a
                 @click="install()"
                 v-if="deferredPrompt"
@@ -105,35 +133,57 @@
         </b-navbar-item>
       </template>
       <template #start>
-          <b-navbar-item class="animate" href="https://github.com/itsminani/PivoHub">
-            This was made using &nbsp
-            <b-tag type="is-success"> <span class="icon">
-                  <i class="fab fa-vuejs"></i>
-                </span> Vue Js</b-tag> &nbsp
-            <b-tag type="is-warning"> <span class="icon">
-                  <i class="fab fa-aws"></i>
-                </span> AWS</b-tag> &nbsp
-            <b-tag type="is-link"> <span class="icon">
-                  <i class="fab fa-js-square"></i>
-                </span> JS & TS</b-tag> &nbsp
-            <b-tag type="is-dark"> <span class="icon"> 
-                  <i class="fab fa-github"></i>
-                </span> Github</b-tag>
-          </b-navbar-item>
+        <b-navbar-item
+          class="animate"
+          href="https://github.com/itsminani/Pivohub-Backend"
+        >
+          This was made using &nbsp
+          <b-tag type="is-success">
+            <span class="icon">
+              <i class="fab fa-vuejs"></i>
+            </span>
+            Vue Js</b-tag
+          >
+          &nbsp
+          <b-tag type="is-warning">
+            <span class="icon">
+              <i class="fab fa-aws"></i>
+            </span>
+            AWS</b-tag
+          >
+          &nbsp
+          <b-tag type="is-link">
+            <span class="icon">
+              <i class="fab fa-js-square"></i>
+            </span>
+            JS & TS</b-tag
+          >
+          &nbsp
+          <b-tag type="is-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            Github</b-tag
+          >
+        </b-navbar-item>
       </template>
 
       <template #end>
         <b-navbar-item tag="div">
           <div class="buttons">
-            <a href="https://github.com/itsminani" class="button is-dark is-outlined">
-              <span class="icon"> 
-                  <i class="fab fa-github"></i>
-                </span><strong>My Git</strong>
+            <a
+              href="https://github.com/itsminani"
+              class="button is-dark is-outlined"
+            >
+              <span class="icon"> <i class="fab fa-github"></i> </span
+              ><strong>My Git</strong>
             </a>
-            <a href="https://www.linkedin.com/in/heritierlucminani/" class="button is-link">
-              <span class="icon"> 
-                  <i class="fab fa-linkedin"></i>
-                </span>My LinkedIn
+            <a
+              href="https://www.linkedin.com/in/heritierlucminani/"
+              class="button is-link"
+            >
+              <span class="icon"> <i class="fab fa-linkedin"></i> </span>My
+              LinkedIn
             </a>
           </div>
         </b-navbar-item>
@@ -149,6 +199,8 @@ AOS.init({
   duration: 600,
 });
 document.title = "PivoHub";
+import { Auth } from 'aws-amplify';
+import { mapGetters } from "vuex";
 import registerForm from "./components/registerForm.vue";
 import loginForm from "./components/loginForm.vue";
 export default {
@@ -163,6 +215,18 @@ export default {
     async install() {
       this.deferredPrompt.prompt();
     },
+    navigate() {
+      this.$router.push({ name: "Cart" });
+    },
+    async signOut() {
+      try {
+        await Auth.signOut();
+        console.log("Sign Out Complete")
+        window.location.reload()
+      } catch (error) {
+        console.log("error signing out: ", error);
+      }
+    },
     pause() {
       this.$buefy.toast.open({
         duration: 5000,
@@ -174,7 +238,15 @@ export default {
       });
     },
   },
+  computed: {
+    ...mapGetters({
+      user: "user/getUserSelf",
+      products: "product/getProductsInCart",
+    }),
+  },
   created() {
+    this.$store.dispatch("user/initialize");
+    this.$store.dispatch("product/listProductsAction");
     this.pause();
     window.addEventListener("beforeinstallprompt", (e) => {
       e.preventDefault();
@@ -212,11 +284,11 @@ export default {
     color: #2c3e50;
   }
 }
-.animate{
+.animate {
   animation-duration: 1s;
   transition: 0.3s;
 }
-.animate:hover{
+.animate:hover {
   transform: scale(1.02);
   transition: 0.3s;
 }

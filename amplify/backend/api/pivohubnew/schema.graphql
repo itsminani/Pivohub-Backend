@@ -1,0 +1,11 @@
+type Product @model @auth(rules: [{allow: public, operations: [read]}]) {
+  id: ID!
+  product_name: String
+  product_description: String
+  product_status: String
+  product_price: Float
+  product_image: String
+  product_tags: AWSJSON
+  product_quantity: String
+  product_volume: String
+}
