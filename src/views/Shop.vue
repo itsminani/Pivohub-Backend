@@ -10,7 +10,6 @@
               type="search"
               style="margin-top: 20px"
               icon="magnify"
-              hint="Doesn't work yet😥"
             >
             </b-input>
           </b-field>
